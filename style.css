@@ -1,0 +1,1117 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.video {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.573);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    position: sticky;
+    bottom: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.video>div {
+    margin: 0 auto;
+    position: relative;
+}
+
+.video p {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2.5rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.693);
+    padding: 0 9px;
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.video p:hover {
+    background-color: black;
+}
+
+.video p:active {
+    background-color: rgba(0, 0, 0, 0.693);
+}
+
+.video video {
+    width: 100%;
+}
+
+
+
+
+/* navigation bar */
+
+.navigationBar {
+    width: 100%;
+    background-color: #6ac88a;
+}
+
+.navigationBar>div:nth-child(1) {
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    padding: 0px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.navigationBar a {
+    color: white;
+    text-decoration: none;
+}
+
+.navigationBar>div:nth-child(1)>div:nth-child(1)>a {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.navigationBar>div:nth-child(1)>div:nth-child(2)>ul {
+    display: flex;
+    list-style: none;
+    display: none;
+}
+
+.navigationBar>div:nth-child(1)>div:nth-child(2)>ul>li {
+    padding: 0px 8px;
+}
+
+.navigationBar>div:nth-child(1)>div:nth-child(2)>ul>li>a {
+    padding: 4px 8px;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.navigationBar>div:nth-child(1)>div:nth-child(2)>ul>li>a:hover {
+    text-decoration: underline;
+}
+
+.navigationBar>div:nth-child(1)>div:nth-child(3)>a {
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 16px 32px;
+    background-color: white;
+    color: #6ac88a;
+    border-radius: 50px;
+    display: none;
+}
+
+.navigationBar>div:nth-child(1)>div:nth-child(3)>a:hover {
+    text-decoration: underline;
+}
+
+
+.navigationBar>div:nth-child(1)>div:nth-child(4) {
+    font-size: 1.5rem;
+    padding: 8px 10px;
+    background-color: white;
+    /* color: #6ac88a; */
+    border-radius: 50%;
+    display: block;
+}
+
+.navigationBar>div:nth-child(2) {
+    display: none;
+}
+
+/* mobile view navigation bar  */
+
+.navigationBarMobileView {
+    display: block !important;
+    width: 80%;
+    background-color: white;
+    color: black;
+    position: absolute;
+    right: 0;
+    padding: 16px 32px;
+    animation: abc 0.2s linear;
+}
+
+@keyframes abc {
+    0% {
+        /* width: 0%; */
+        opacity: 0;
+    }
+
+    100% {
+        /* width: 80%; */
+        opacity: 1;
+    }
+}
+
+.navigationBarMobileView a {
+    color: black;
+}
+
+.navigationBarMobileView>div:nth-child(1)>ul {
+    list-style-type: none;
+}
+
+.navigationBarMobileView>div:nth-child(1)>ul>li>a {
+    display: block;
+    padding: 32px 0px;
+    border-bottom: 1px solid black;
+    font-weight: bold;
+}
+
+.navigationBarMobileView>div:nth-child(2) {
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 16px 32px;
+    background-color: #6ac88a;
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    margin-top: 16px;
+}
+
+.navigationBarMobileView>div:nth-child(2)>a {
+    color: white;
+}
+
+
+/* Hero section coding starts here */
+
+.heroSection {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./images//image\ \(1\).jpg);
+    background-color: rgba(0, 0, 0, 0.304);
+    background-blend-mode: color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: calc(50% - 150px);
+    padding: 0px 16px;
+}
+
+.heroSection>div>div>h1 {
+    color: white;
+    font-size: 3rem;
+}
+
+.heroSection>div>div>p {
+    color: white;
+    margin: 16px 0px;
+}
+
+.heroSection>div>div>a {
+    text-decoration: none;
+    color: white;
+    background-color: #6ac88a;
+    padding: 16px 32px;
+    border-radius: 50px;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+
+.heroSection>div>div>a:hover {
+    text-decoration: underline;
+}
+
+/* card section  */
+
+.cardsSecton {
+    width: 100%;
+    padding: 64px 16px;
+    position: relative;
+}
+
+.cardsSecton::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #fef9ee;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-top-left-radius: 1000px;
+    border-top-right-radius: 1000px;
+}
+
+.cardsSecton>div {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardsSecton>div>div {
+    padding: 32px;
+    width: 100%;
+    text-align: center;
+}
+
+.cardsSecton>div>div>h1 {
+    color: #6ac88a;
+}
+
+.cardsSecton>div>div>p {
+    margin: 16px 0px;
+    line-height: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.cardsSecton>div>div>a {
+    background-color: #6ac88a;
+    color: white;
+    text-decoration: none;
+    padding: 16px 32px;
+    border-radius: 50px;
+    display: inline-block;
+}
+
+.cardsSecton>div>div>a:hover {
+    text-decoration: underline;
+}
+
+
+/* change your life section */
+
+.ChangeYourLifeSection {
+    background-color: #bae3c8;
+}
+
+.ChangeYourLifeSection>div {
+    padding: 128px 16px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.ChangeYourLifeSection>div>div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    order: 2;
+    margin-top: 100px;
+}
+
+.ChangeYourLifeSection>div>div:nth-child(1)>h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #26382b;
+}
+
+.ChangeYourLifeSection>div>div:nth-child(1)>p {
+    line-height: 32px;
+    margin-top: 32px;
+}
+
+.ChangeYourLifeSection>div>div:nth-child(2) {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 1;
+}
+
+.ChangeYourLifeSection>div>div:nth-child(2)>img {
+    width: 250px;
+    border-radius: 300px;
+}
+
+
+/* video section styling  */
+
+.videoSection {
+    width: 100%;
+    height: 100vw;
+    background-image: url(./images/image\ \(2\).jpg);
+    background-color: #6ac88999;
+    background-blend-mode: lighten;
+    /* background-position: bottom; */
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.videoSection>div {
+    padding: 0px 16px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.videoSection>div>div {
+    display: block;
+    background-image: url(./images/image\ \(4\).jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 60%;
+    border-radius: 10px;
+    position: relative;
+}
+
+.videoSection>div>div::after {
+    content: "‣";
+    color: #44af69;
+    font-size: 10rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+
+
+
+
+.weeklyPlanSection,
+.latestRecipiesSection,
+.blogsSection {
+    width: 100%;
+    background-color: #1f1d1a;
+}
+
+.weeklyPlanSection>div,
+.latestRecipiesSection>div,
+.blogsSection>div {
+    text-align: center;
+    padding: 64px 16px;
+    margin: 0 auto;
+}
+
+.weeklyPlanSection>div>div,
+.latestRecipiesSection>div>div,
+.blogsSection>div>div {
+    gap: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.weeklyPlanSection>div>div>div,
+.latestRecipiesSection>div>div>div,
+.blogsSection>div>div>div {
+    height: 400px;
+    flex: 1;
+    border-radius: 10px;
+    background-color: #75083a;
+    overflow: hidden;
+    flex-basis: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.weeklyPlanSection>div>div>div>a,
+.latestRecipiesSection>div>div>div>a,
+.blogsSection>div>div>div>a {
+    padding: 16px;
+    display: block;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    border-top-right-radius: 100px;
+    transition: all 0.5s;
+    background-blend-mode: color;
+    background-size: 200%;
+    background-position: center;
+}
+
+.weeklyPlanSection>div>div>div:nth-child(1)>a {
+    background-image: url(./images/gallery1.jpg), linear-gradient(transparent, black);
+}
+
+.weeklyPlanSection>div>div>div:nth-child(2)>a {
+    background-image: url(./images/gallery5.jpg), linear-gradient(transparent, black);
+}
+
+.weeklyPlanSection>div>div>div:nth-child(3)>a {
+    background-image: url(./images/gallery13.jpg), linear-gradient(transparent, black);
+}
+
+.weeklyPlanSection>div>div>div:nth-child(4)>a {
+    background-image: url(./images/gallery14.jpg), linear-gradient(transparent, black);
+}
+
+.weeklyPlanSection>div>div>div>a:hover,
+.latestRecipiesSection>div>div>div>a:hover,
+.blogsSection>div>div>div>a:hover {
+    background-size: 220%;
+    text-decoration: underline;
+}
+
+
+.weeklyPlanSection h1,
+.latestRecipiesSection h1,
+.blogsSection h1 {
+    color: #44af69;
+    font-size: 4rem;
+    margin-bottom: 64px;
+}
+
+.weeklyPlanSection a,
+.latestRecipiesSection a,
+.blogsSection a {
+    color: #44af69;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.blogsSection>div>div>div {
+    position: relative;
+}
+
+.blogsSection p {
+    position: absolute;
+    color: white;
+    font-size: 1.2rem;
+    top: 16px;
+    left: 16px;
+
+}
+
+
+.latestRecipiesSection>div>div>div:nth-child(1)>a {
+    background-image: url(./images/gallery1.jpg), linear-gradient(transparent, black);
+}
+
+.latestRecipiesSection>div>div>div:nth-child(2)>a {
+    background-image: url(./images/pexels-daria-shevtsova-949069-817x1025.jpg), linear-gradient(transparent, black);
+}
+
+.latestRecipiesSection>div>div>div:nth-child(3)>a {
+    background-image: url(./images/pexels-ella-olsson-1640777-563x556.jpg), linear-gradient(transparent, black);
+}
+
+.latestRecipiesSection>div>div>div:nth-child(4)>a {
+    background-image: url(./images/pexels-daria-shevtsova-1580466-817x910.jpg), linear-gradient(transparent, black);
+}
+
+.latestRecipiesSection>div>div>div:nth-child(5)>a {
+    background-image: url(./images/gallery5.jpg), linear-gradient(transparent, black);
+}
+
+.latestRecipiesSection>div>div>div:nth-child(6)>a {
+    background-image: url(./images/gallery6.jpg), linear-gradient(transparent, black);
+}
+
+
+
+
+.blogsSection>div>div>div:nth-child(1)>a {
+    background-image: url(./images/gallery16.jpg), linear-gradient(transparent, black);
+}
+
+.blogsSection>div>div>div:nth-child(2)>a {
+    background-image: url(./images/gallery15.jpg), linear-gradient(transparent, black);
+}
+
+.blogsSection>div>div>div:nth-child(3)>a {
+    background-image: url(./images/pexels-engin-akyurt-1435904-806x538.jpg), linear-gradient(transparent, black);
+}
+
+
+/* contact form section */
+
+.contactUs {
+    background-color: #fef9ee;
+}
+
+.contactUs>div {
+    margin: 0 auto;
+    padding: 64px 16px;
+}
+
+.contactUs>div>form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactUs label {
+    margin: 32px 0px 16px 0px;
+}
+
+.contactUs input {
+    height: 48px;
+    padding: 0px 16px;
+    font-size: 1.2rem;
+}
+
+.contactUs textarea {
+    padding: 16px;
+    font-size: 1.2rem;
+}
+
+.contactUs button {
+    margin-top: 32px;
+    padding: 16px 32px;
+    align-self: center;
+    background-color: #44af69;
+    color: white;
+    border-radius: 50px;
+    font-size: 1.3rem;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.contactUs button:hover {
+    text-decoration: underline;
+}
+
+.contactUs h1 {
+    font-size: 2rem;
+    color: #44af69;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+/* they trust us section  */
+
+.trustersSection {
+    background-color: #bae3c8;
+}
+
+.trustersSection>div {
+    padding: 64px 16px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.trustersSection>div>div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+.trustersSection h1 {
+    font-size: 3rem;
+    color: #44af69;
+    margin-bottom: 32px;
+}
+
+
+/* testimonials Section */
+
+
+
+.testimonialsSection {
+    background-color: #bae3c8;
+}
+
+.testimonialsSection>div {
+    padding: 64px 16px;
+    margin: 0 auto;
+}
+
+.testimonialsSection>div>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.testimonialsSection>div>div:nth-child(2) {
+    margin: 64px auto;
+}
+
+.testimonialsSection>div>div:nth-child(1)>div:nth-child(1),
+.testimonialsSection>div>div:nth-child(2)>div:nth-child(2),
+.testimonialsSection>div>div:nth-child(3)>div:nth-child(1) {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 250px;
+    height: 250px;
+    margin: 32px 0;
+}
+
+
+.testimonialsSection>div>div>div:nth-child(1)>img,
+.testimonialsSection>div>div>div:nth-child(2)>img,
+.testimonialsSection>div>div>div:nth-child(3)>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+}
+
+.testimonialsSection>div>div>div {
+    position: relative;
+}
+
+.testimonialsSection>div>div>div:nth-child(1)>span>img,
+.testimonialsSection>div>div>div:nth-child(2)>span>img,
+.testimonialsSection>div>div>div:nth-child(3)>span>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.testimonialsSection>div>div:nth-child(1)>div:nth-child(2),
+.testimonialsSection>div>div:nth-child(3)>div:nth-child(2) {
+    text-align: center;
+}
+
+.testimonialsSection>div>div:nth-child(2)>div:nth-child(1) {
+    text-align: center;
+}
+
+
+
+
+.testimonialsSection>div>div>div>p:nth-child(1) {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    word-spacing: 0.1rem;
+    font-weight: 500;
+}
+
+.testimonialsSection>div>div>div>p:nth-child(2) {
+    font-size: 1.5rem;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    font-weight: bold;
+    color: #44af69;
+}
+
+.testimonialsSection>div>div>div>p:nth-child(3) {
+    color: rgb(66, 66, 66);
+}
+
+.testimonialsSection>div>div:nth-child(2)>div:nth-child(1) {
+    order: 2;
+}
+
+.testimonialsSection>div>div:nth-child(2)>div:nth-child(2) {
+    order: 1;
+}
+
+
+
+
+
+
+/* health saminar section  */
+
+.healthSaminarSection {
+    width: 100%;
+    background-color: #fef9ee;
+}
+
+.healthSaminarSection>div {
+    margin: 0px auto;
+    padding: 64px 16px;
+}
+
+.healthSaminarSection h1 {
+    font-size: 4rem;
+    text-align: center;
+    color: #44af69;
+}
+
+.healthSaminarSection>div>p {
+    text-align: center;
+    margin: 32px 0px;
+    font-size: 1.1rem;
+}
+
+.healthSaminarSection>div>div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.healthSaminarSection>div>div>div {
+    padding: 32px;
+    border-radius: 10px;
+    flex: 1;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 100%;
+}
+
+.healthSaminarSection>div>div>div:nth-child(1) {
+    background-color: #bae3c8;
+}
+
+.healthSaminarSection>div>div>div:nth-child(2) {
+    background-color: #f9c9c8;
+}
+
+.healthSaminarSection>div>div>div:nth-child(3) {
+    background-color: #fcf0d5;
+}
+
+.healthSaminarSection>div>div>div>p {
+    line-height: 2rem;
+    margin-bottom: 16px;
+}
+
+.healthSaminarSection>div>div>div>p:nth-child(1) {
+    font-size: 1.3rem;
+    color: #44af69;
+    font-weight: bolder;
+}
+
+.healthSaminarSection>div>div>div>p:nth-child(3) {
+    color: #44af69;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin-bottom: 32px;
+}
+
+
+
+
+
+/* looking for us section  */
+
+.lookingForUsSection>div {
+    padding: 64px 16px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lookingForUsSection h1 {
+    font-size: 3rem;
+    font-weight: bolder;
+    line-height: 4rem;
+    width: 100%;
+}
+
+.lookingForUsSection p {
+    line-height: 2rem;
+    width: 100%;
+    margin-top: 32px;
+}
+
+/* footer section  */
+
+.footer {
+    width: 100%;
+    padding: 32px 16px;
+    background-color: #1f1d1a;
+}
+
+.footer p {
+    font-size: 1.3rem;
+    color: white;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:576px) {
+
+    .navigationBar>div:nth-child(1),
+    .heroSection>div,
+    .cardsSecton>div,
+    .ChangeYourLifeSection>div,
+    .videoSection>div,
+    .weeklyPlanSection>div,
+    .latestRecipiesSection>div,
+    .blogsSection>div,
+    .lookingForUsSection>div,
+    .healthSaminarSection>div,
+    .testimonialsSection>div,
+    .trustersSection>div,
+    .contactUs>div,
+    .video>div {
+        width: 540px;
+    }
+
+    .heroSection>div>div>a {
+        display: inline-block;
+    }
+
+    .ChangeYourLifeSection>div>div:nth-child(2)>img {
+        width: 400px;
+    }
+
+    .videoSection>div>div {
+        height: 80%;
+    }
+
+    .contactUs h1 {
+        font-size: 3rem;
+    }
+
+    .videoSection>div>div::after {
+        font-size: 20rem;
+    }
+}
+
+@media screen and (min-width:786px) {
+
+    .navigationBar>div:nth-child(1),
+    .heroSection>div,
+    .cardsSecton>div,
+    .ChangeYourLifeSection>div,
+    .videoSection>div,
+    .weeklyPlanSection>div,
+    .latestRecipiesSection>div,
+    .blogsSection>div,
+    .lookingForUsSection>div,
+    .healthSaminarSection>div,
+    .testimonialsSection>div,
+    .trustersSection>div,
+    .contactUs>div,
+    .video>div {
+        width: 720px;
+    }
+
+    .navigationBar>div:nth-child(1)>div:nth-child(3)>a {
+        display: block;
+    }
+
+    .heroSection>div>div>h1 {
+        font-size: 4rem;
+    }
+
+    .weeklyPlanSection>div>div>div,
+    .latestRecipiesSection>div>div>div {
+        flex-basis: 48%;
+    }
+
+    .blogsSection>div>div>div {
+        flex-basis: 45%;
+    }
+
+    .contactUs h1 {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (min-width:992px) {
+
+    .navigationBar>div:nth-child(1),
+    .heroSection>div,
+    .cardsSecton>div,
+    .ChangeYourLifeSection>div,
+    .videoSection>div,
+    .weeklyPlanSection>div,
+    .latestRecipiesSection>div,
+    .blogsSection>div,
+    .lookingForUsSection>div,
+    .healthSaminarSection>div,
+    .testimonialsSection>div,
+    .trustersSection>div,
+    .contactUs>div,
+    .video>div {
+        width: 960px;
+    }
+
+    .navigationBar>div:nth-child(1)>div:nth-child(2)>ul {
+        display: flex;
+    }
+
+    .navigationBar>div:nth-child(1)>div:nth-child(4) {
+        display: none;
+    }
+
+    .heroSection>div>div {
+        width: 55%;
+    }
+
+    .cardsSecton>div {
+        flex-direction: row;
+    }
+
+    .cardsSecton>div>div {
+        width: 33%;
+        text-align: start;
+    }
+
+    .ChangeYourLifeSection>div {
+        flex-direction: row;
+    }
+
+    .ChangeYourLifeSection>div>div:nth-child(1) {
+        margin-top: 0;
+        order: 1;
+    }
+
+    .ChangeYourLifeSection>div>div:nth-child(1)>h1 {
+        font-size: 4rem;
+    }
+
+    .ChangeYourLifeSection>div>div:nth-child(1)>p {
+        margin-top: 0;
+    }
+
+    .ChangeYourLifeSection>div>div:nth-child(2) {
+        order: 2;
+    }
+
+    .videoSection {
+        height: 100vh;
+    }
+
+    .lookingForUsSection h1 {
+        font-size: 4rem;
+        width: 60%;
+    }
+
+    .lookingForUsSection p {
+        width: 60%;
+    }
+
+    .healthSaminarSection>div>div>div {
+        flex-basis: 32%;
+    }
+
+    .testimonialsSection>div>div {
+        flex-direction: row;
+    }
+
+    .testimonialsSection>div>div:nth-child(1)>div:nth-child(1),
+    .testimonialsSection>div>div:nth-child(2)>div:nth-child(2),
+    .testimonialsSection>div>div:nth-child(3)>div:nth-child(1) {
+        margin: 0px;
+    }
+
+    .testimonialsSection>div>div:nth-child(1)>div:nth-child(2),
+    .testimonialsSection>div>div:nth-child(3)>div:nth-child(2) {
+        margin-left: 32px;
+        text-align: start;
+    }
+
+    .testimonialsSection>div>div:nth-child(2)>div:nth-child(1) {
+        margin-right: 32px;
+        text-align: start;
+    }
+
+    .testimonialsSection>div>div>div>p:nth-child(1) {
+        font-size: 1.7rem;
+        line-height: 2.8rem;
+    }
+
+    .testimonialsSection>div>div:nth-child(2)>div:nth-child(1) {
+        order: 1;
+    }
+
+    .testimonialsSection>div>div:nth-child(2)>div:nth-child(2) {
+        order: 2;
+    }
+}
+
+@media screen and (min-width:1200px) {
+
+    .navigationBar>div:nth-child(1),
+    .heroSection>div,
+    .cardsSecton>div,
+    .ChangeYourLifeSection>div,
+    .videoSection>div,
+    .weeklyPlanSection>div,
+    .latestRecipiesSection>div,
+    .blogsSection>div,
+    .lookingForUsSection>div,
+    .healthSaminarSection>div,
+    .testimonialsSection>div,
+    .trustersSection>div,
+    .contactUs>div,
+    .video>div {
+        width: 1140px;
+    }
+
+    .heroSection>div>div {
+        width: 55%;
+    }
+
+    .weeklyPlanSection>div>div>div {
+        flex-basis: 23%;
+    }
+
+    .latestRecipiesSection>div>div>div,
+    .blogsSection>div>div>div {
+        flex-basis: 32%;
+    }
+
+    .videoSection>div>div::after {
+        font-size: 30rem;
+    }
+}
+
+@media screen and (min-width:1400px) {
+
+    .navigationBar>div:nth-child(1),
+    .heroSection>div,
+    .cardsSecton>div,
+    .ChangeYourLifeSection>div,
+    .videoSection>div,
+    .weeklyPlanSection>div,
+    .latestRecipiesSection>div,
+    .blogsSection>div,
+    .lookingForUsSection>div,
+    .healthSaminarSection>div,
+    .testimonialsSection>,
+    .trustersSection>div,
+    .contactUs>div,
+    .video>div {
+        width: 1320px;
+    }
+
+    .heroSection>div>div {
+        width: 55%;
+    }
+}
